@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on Junqi Yang Blog</title>
-    <link>/page/</link>
+    <link>https://younglogos.github.io/page/</link>
     <description>Recent content in Pages on Junqi Yang Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Junqi Yang</copyright>
     <lastBuildDate>Sat, 16 Nov 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/page/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://younglogos.github.io/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>/page/about/</link>
+      <link>https://younglogos.github.io/page/about/</link>
       <pubDate>Sat, 16 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/page/about/</guid>
+      <guid>https://younglogos.github.io/page/about/</guid>
       <description>About 北京大学生科院在读博士生一枚，写博客的缘由是想为自己的所见，所闻，所思搭建一个输出口。实验之余好扮演伪码农的角色，常有练习，鲜有佳作。博客的记录也是为了让自己更好地学习，同时起一个督促的作用。鉴于专业的特色，也会总结一些生命科学领域的研究进展。如今的时代，思考似乎成了一种麻烦事，每天的可接收的信息太多，导致光在接收的过程里就耗费了过多注意力和时间。我不愿只做一个在信息洪流里亦步亦趋，逆来顺受之人，愿多读有智识之书，做耗费脑力之思辨，最后挤出的结果输出为文字。总之，很多都还在建设之中，如内容有不合时宜之处，望读者勿字字较真……</description>
     </item>
     
     <item>
       <title>Contact</title>
-      <link>/page/contact/</link>
+      <link>https://younglogos.github.io/page/contact/</link>
       <pubDate>Fri, 03 Apr 2015 02:13:50 +0000</pubDate>
       
-      <guid>/page/contact/</guid>
+      <guid>https://younglogos.github.io/page/contact/</guid>
       <description>Contact Aenean ipsum justo, semper eu nisl ut, pretium tincidunt sem. Praesent et diam sit amet lacus lobortis dictum a id lacus. Quisque hendrerit sit amet turpis eu varius. Ut id lorem ac felis ultrices tincidunt. Pellentesque consequat arcu ac fringilla imperdiet. Phasellus pellentesque, sapien non pulvinar blandit, sapien ante aliquet felis, vel porttitor sapien ante in lacus. Fusce non urna aliquet, malesuada nibh vel, luctus urna. Phasellus ut lacus molestie, varius purus quis, malesuada lorem.</description>
     </item>
     
