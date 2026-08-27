@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Migrating from Jekyll &middot; Junqi Yang</title>
-        <meta name="description" content="Migrating from Jekyll description.">
+        <title>从 Jekyll 迁移到 Hugo &middot; Junqi Yang</title>
+        <meta name="description" content="将博客从 Jekyll 迁移到 Hugo 的步骤。">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.165.0">
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Migrating from Jekyll">
-<meta property="og:description" content="Migrating from Jekyll description.">
+        <meta property="og:title" content="从 Jekyll 迁移到 Hugo">
+<meta property="og:description" content="将博客从 Jekyll 迁移到 Hugo 的步骤。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://localhost:1313/2014/04/02/migrate-from-jekyll/">
-        <link rel="stylesheet" href="http://localhost:1313/dist/site.css">
-        <link rel="stylesheet" href="http://localhost:1313/dist/syntax.css">
+<meta property="og:url" content="https://younglogos.github.io/2014/04/02/migrate-from-jekyll/">
+        <link rel="stylesheet" href="https://younglogos.github.io/dist/site.css">
+        <link rel="stylesheet" href="https://younglogos.github.io/dist/syntax.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         
-        
+        <style>
+     
+    .site-nav-item .lang-current {
+        font-weight: 700;
+        opacity: 0.85;
+    }
+</style>
+
         
         
         
@@ -34,11 +41,11 @@
                     <div class="site-title-wrapper">
                         
                             <h1 class="site-title">
-                                <a href="http://localhost:1313/">Junqi Yang Blog</a>
+                                <a href="https://younglogos.github.io/">Junqi Yang Blog</a>
                             </h1>
                         
                         
-                            <a class="button-square" href="http://localhost:1313/index.xml" aria-label="RSS"><i class="fa fa-rss" aria-hidden="true"></i></a>
+                            <a class="button-square" href="https://younglogos.github.io/index.xml" aria-label="RSS"><i class="fa fa-rss" aria-hidden="true"></i></a>
                         
                         
                             <a class="button-square button-social hint--top" data-hint="Twitter" aria-label="Twitter" href="https://twitter.com/junqi_yang" rel="me" >
@@ -64,12 +71,32 @@
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
-        <a href="/">Blog</a>
+        <a href="/">博客</a>
     </li>
 
     <li class="site-nav-item">
-        <a href="/page/about/">About</a>
+        <a href="/page/about/">关于</a>
     </li>
+
+
+    
+        <li class="site-nav-item">
+            <span class="lang-current" title="中文">中文</span>
+        </li>
+    
+
+    
+        
+        
+        
+            
+        
+            
+        
+        <li class="site-nav-item">
+            <a href="https://younglogos.github.io/en/2014/04/02/migrate-from-jekyll/" title="English">English</a>
+        </li>
+    
 
 
                     </ul>
@@ -82,57 +109,62 @@
 <div class="container">
     <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Migrating from Jekyll</h1>
+    <h1 class="post-title" itemprop="name headline">从 Jekyll 迁移到 Hugo</h1>
     
-        <p class="post-description" itemprop="description">Migrating from Jekyll description.</p>
+        <p class="post-description" itemprop="description">将博客从 Jekyll 迁移到 Hugo 的步骤。</p>
     
     <p class="post-date">
-        <span>Published <time datetime="2014-04-02" itemprop="datePublished">Wed, Apr 2, 2014</time></span>
-        <span>by</span>
+        
+            <span>发布于 <time datetime="2014-04-02" itemprop="datePublished">2014年04月02日</time></span>
+            <span>作者</span>
+        
         <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
             <span itemprop="name">
-                <a href="#" itemprop="url" rel="author">Michael Henderson</a>
+                <a href="#" itemprop="url" rel="author">Junqi Yang</a>
             </span>
         </span>
     </p>
     
         <p class="post-reading post-line">
-            <span>Estimated reading time: 4 min</span>
+            
+                <span>预计阅读时间：1 分钟</span>
+            
         </p>
     
 </header>
 
+
         <div class="post-content clearfix" itemprop="articleBody">
     
 
-    <h2 id="move-static-content-to-static">Move static content to <code>static</code></h2>
-<p>Jekyll has a rule that any directory not starting with <code>_</code> will be copied as-is to the <code>_site</code> output. Hugo keeps all static content under <code>static</code>. You should therefore move it all there.
-With Jekyll, something that looked like</p>
+    <h2 id="把静态内容移到-static-目录">把静态内容移到 <code>static</code> 目录</h2>
+<p>Jekyll 有一条规则：任何不以 <code>_</code> 开头的目录都会原样复制到 <code>_site</code> 输出。而 Hugo 把所有静态内容放在 <code>static</code> 目录下，因此你需要把它们都移过去。
+在 Jekyll 里长这样的目录结构：</p>
 <pre><code>▾ &lt;root&gt;/
     ▾ images/
         logo.png
 </code></pre>
-<p>should become</p>
+<p>应该变成：</p>
 <pre><code>▾ &lt;root&gt;/
     ▾ static/
         ▾ images/
             logo.png
 </code></pre>
-<p>Additionally, you&rsquo;ll want any files that should reside at the root (such as <code>CNAME</code>) to be moved to <code>static</code>.</p>
-<h2 id="create-your-hugo-configuration-file">Create your Hugo configuration file</h2>
-<p>Hugo can read your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the <a href="/overview/configuration/">Hugo configuration documentation</a> for details.</p>
-<h2 id="set-your-configuration-publish-folder-to-_site">Set your configuration publish folder to <code>_site</code></h2>
-<p>The default is for Jekyll to publish to <code>_site</code> and for Hugo to publish to <code>public</code>. If, like me, you have <a href="http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html"><code>_site</code> mapped to a git submodule on the <code>gh-pages</code> branch</a>, you&rsquo;ll want to do one of two alternatives:</p>
+<p>另外，任何需要放在站点根目录的文件（如 <code>CNAME</code>）也应移到 <code>static</code>。</p>
+<h2 id="创建-hugo-配置文件">创建 Hugo 配置文件</h2>
+<p>Hugo 可以读取 JSON、YAML 或 TOML 格式的配置，也支持自定义配置参数。详见 <a href="/overview/configuration/">Hugo 配置文档</a>。</p>
+<h2 id="把发布目录设为-_site">把发布目录设为 <code>_site</code></h2>
+<p>Jekyll 默认发布到 <code>_site</code>，而 Hugo 默认发布到 <code>public</code>。如果你像我一样<a href="http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html">把 <code>_site</code> 映射为 <code>gh-pages</code> 分支上的 git 子模块</a>，可以二选一：</p>
 <ol>
 <li>
-<p>Change your submodule to point to map <code>gh-pages</code> to public instead of <code>_site</code> (recommended).</p>
+<p>让子模块将 <code>gh-pages</code> 映射到 <code>public</code>（推荐）：</p>
 <pre><code> git submodule deinit _site
  git rm _site
  git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
 </code></pre>
 </li>
 <li>
-<p>Or, change the Hugo configuration to use <code>_site</code> instead of <code>public</code>.</p>
+<p>或者修改 Hugo 配置，用 <code>_site</code> 替代 <code>public</code>：</p>
 <pre><code> {
      ..
      &quot;publishdir&quot;: &quot;_site&quot;,
@@ -141,112 +173,25 @@ With Jekyll, something that looked like</p>
 </code></pre>
 </li>
 </ol>
-<h2 id="convert-jekyll-templates-to-hugo-templates">Convert Jekyll templates to Hugo templates</h2>
-<p>That&rsquo;s the bulk of the work right here. The documentation is your friend. You should refer to <a href="http://jekyllrb.com/docs/templates/">Jekyll&rsquo;s template documentation</a> if you need to refresh your memory on how you built your blog and <a href="/layout/templates/">Hugo&rsquo;s template</a> to learn Hugo&rsquo;s way.</p>
-<p>As a single reference data point, converting my templates for <a href="http://heyitsalex.net/">heyitsalex.net</a> took me no more than a few hours.</p>
-<h2 id="convert-jekyll-plugins-to-hugo-shortcodes">Convert Jekyll plugins to Hugo shortcodes</h2>
-<p>Jekyll has <a href="https://jekyllrb.com/docs/plugins/">plugins</a>; Hugo has <a href="/doc/shortcodes/">shortcodes</a>. It&rsquo;s fairly trivial to do a port.</p>
-<h3 id="implementation">Implementation</h3>
-<p>As an example, I was using a custom <a href="https://github.com/alexandre-normand/alexandre-normand/blob/74bb12036a71334fdb7dba84e073382fc06908ec/_plugins/image_tag.rb"><code>image_tag</code></a> plugin to generate figures with caption when running Jekyll. As I read about shortcodes, I found Hugo had a nice built-in shortcode that does exactly the same thing.</p>
-<p>Jekyll&rsquo;s plugin:</p>
-<pre><code>module Jekyll
-  class ImageTag &lt; Liquid::Tag
-    @url = nil
-    @caption = nil
-    @class = nil
-    @link = nil
-    // Patterns
-    IMAGE_URL_WITH_CLASS_AND_CAPTION =
-    IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK = /(\w+)(\s+)((https?:\/\/|\/)(\S+))(\s+)&quot;(.*?)&quot;(\s+)-&gt;((https?:\/\/|\/)(\S+))(\s*)/i
-    IMAGE_URL_WITH_CAPTION = /((https?:\/\/|\/)(\S+))(\s+)&quot;(.*?)&quot;/i
-    IMAGE_URL_WITH_CLASS = /(\w+)(\s+)((https?:\/\/|\/)(\S+))/i
-    IMAGE_URL = /((https?:\/\/|\/)(\S+))/i
-    def initialize(tag_name, markup, tokens)
-      super
-      if markup =~ IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK
-        @class   = $1
-        @url     = $3
-        @caption = $7
-        @link = $9
-      elsif markup =~ IMAGE_URL_WITH_CLASS_AND_CAPTION
-        @class   = $1
-        @url     = $3
-        @caption = $7
-      elsif markup =~ IMAGE_URL_WITH_CAPTION
-        @url     = $1
-        @caption = $5
-      elsif markup =~ IMAGE_URL_WITH_CLASS
-        @class = $1
-        @url   = $3
-      elsif markup =~ IMAGE_URL
-        @url = $1
-      end
-    end
-    def render(context)
-      if @class
-        source = &quot;&lt;figure class='#{@class}'&gt;&quot;
-      else
-        source = &quot;&lt;figure&gt;&quot;
-      end
-      if @link
-        source += &quot;&lt;a href=\&quot;#{@link}\&quot;&gt;&quot;
-      end
-      source += &quot;&lt;img src=\&quot;#{@url}\&quot;&gt;&quot;
-      if @link
-        source += &quot;&lt;/a&gt;&quot;
-      end
-      source += &quot;&lt;figcaption&gt;#{@caption}&lt;/figcaption&gt;&quot; if @caption
-      source += &quot;&lt;/figure&gt;&quot;
-      source
-    end
-  end
-end
-Liquid::Template.register_tag('image', Jekyll::ImageTag)
+<h2 id="把-jekyll-模板转换为-hugo-模板">把 Jekyll 模板转换为 Hugo 模板</h2>
+<p>这是迁移工作的主要部分。文档是你的朋友：需要回忆 Jekyll 博客的搭建方式时查 <a href="http://jekyllrb.com/docs/templates/">Jekyll 模板文档</a>，学习 Hugo 的方式时查 <a href="/layout/templates/">Hugo 模板文档</a>。</p>
+<p>提供一个参考数据点：转换我为 <a href="http://heyitsalex.net/">heyitsalex.net</a> 写的模板花了我不到几个小时。</p>
+<h2 id="把-jekyll-插件转换为-hugo-shortcode">把 Jekyll 插件转换为 Hugo shortcode</h2>
+<p>Jekyll 有<a href="https://jekyllrb.com/docs/plugins/">插件</a>，Hugo 有 <a href="/doc/shortcodes/">shortcode</a>，移植相当简单。</p>
+<h3 id="实例">实例</h3>
+<p>举例来说，我在用 Jekyll 时写了一个自定义 <a href="https://github.com/alexandre-normand/alexandre-normand/blob/74bb12036a71334fdb7dba84e073382fc06908ec/_plugins/image_tag.rb"><code>image_tag</code></a> 插件来生成带标题的图。了解 shortcode 之后，我发现 Hugo 内置的 figure shortcode 恰好能做同样的事：</p>
+<pre><code>{{% figure src=&quot;/uploads/2014/03/picard-facepalm.jpg&quot; caption=&quot;Jean-Luc Picard facepalming&quot; alt=&quot;Jean-Luc Picard facepalming&quot; class=&quot;full&quot; %}}
 </code></pre>
-<p>is written as this Hugo shortcode:</p>
-<pre><code>&lt;!-- image --&gt;
-&lt;figure {{ with .Get &quot;class&quot; }}class=&quot;{{.}}&quot;{{ end }}&gt;
-    {{ with .Get &quot;link&quot;}}&lt;a href=&quot;{{.}}&quot;&gt;{{ end }}
-        &lt;img src=&quot;{{ .Get &quot;src&quot; }}&quot; {{ if or (.Get &quot;alt&quot;) (.Get &quot;caption&quot;) }}alt=&quot;{{ with .Get &quot;alt&quot;}}{{.}}{{else}}{{ .Get &quot;caption&quot; }}{{ end }}&quot;{{ end }} /&gt;
-    {{ if .Get &quot;link&quot;}}&lt;/a&gt;{{ end }}
-    {{ if or (or (.Get &quot;title&quot;) (.Get &quot;caption&quot;)) (.Get &quot;attr&quot;)}}
-    &lt;figcaption&gt;{{ if isset .Params &quot;title&quot; }}
-        {{ .Get &quot;title&quot; }}{{ end }}
-        {{ if or (.Get &quot;caption&quot;) (.Get &quot;attr&quot;)}}&lt;p&gt;
-        {{ .Get &quot;caption&quot; }}
-        {{ with .Get &quot;attrlink&quot;}}&lt;a href=&quot;{{.}}&quot;&gt; {{ end }}
-            {{ .Get &quot;attr&quot; }}
-        {{ if .Get &quot;attrlink&quot;}}&lt;/a&gt; {{ end }}
-        &lt;/p&gt; {{ end }}
-    &lt;/figcaption&gt;
-    {{ end }}
-&lt;/figure&gt;
-&lt;!-- image --&gt;
-</code></pre>
-<h3 id="usage">Usage</h3>
-<p>I simply changed:</p>
-<pre><code>{% image full https://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg &quot;One of my favorite touristy-type photos. I secretly waited for the good light while we were &quot;having fun&quot; and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing.&quot; -&gt;https://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/ %}
-</code></pre>
-<p>to this (this example uses a slightly extended version named <code>fig</code>, different than the built-in <code>figure</code>):</p>
-<pre><code>{{% fig class=&quot;full&quot; src=&quot;https://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg&quot; title=&quot;One of my favorite touristy-type photos. I secretly waited for the good light while we were having fun and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing.&quot; link=&quot;https://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/&quot; %}}
-</code></pre>
-<p>As a bonus, the shortcode named parameters are, arguably, more readable.</p>
-<h2 id="finishing-touches">Finishing touches</h2>
-<h3 id="fix-content">Fix content</h3>
-<p>Depending on the amount of customization that was done with each post with Jekyll, this step will require more or less effort. There are no hard and fast rules here except that <code>hugo server --watch</code> is your friend. Test your changes and fix errors as needed.</p>
-<h3 id="clean-up">Clean up</h3>
-<p>You&rsquo;ll want to remove the Jekyll configuration at this point. If you have anything else that isn&rsquo;t used, delete it.</p>
-<h2 id="a-practical-example-in-a-diff">A practical example in a diff</h2>
-<p><a href="http://heyitsalex.net/">Hey, it&rsquo;s Alex</a> was migrated in less than a <em>father-with-kids day</em> from Jekyll to Hugo. You can see all the changes (and screw-ups) by looking at this <a href="https://github.com/alexandre-normand/alexandre-normand/compare/869d69435bd2665c3fbf5b5c78d4c22759d7613a...b7f6605b1265e83b4b81495423294208cc74d610">diff</a>.</p>
+<p>完整的 shortcode 使用方法见 <a href="/doc/shortcodes/">Hugo 文档</a>。</p>
 
 </div>
 
         <footer class="post-footer clearfix"><div class="share">
-            <a class="icon-twitter" href="https://twitter.com/share?text=Migrating%20from%20Jekyll&url=http%3a%2f%2flocalhost%3a1313%2f2014%2f04%2f02%2fmigrate-from-jekyll%2f"
+            <a class="icon-twitter" href="https://twitter.com/share?text=%e4%bb%8e%20Jekyll%20%e8%bf%81%e7%a7%bb%e5%88%b0%20Hugo&url=https%3a%2f%2fyounglogos.github.io%2f2014%2f04%2f02%2fmigrate-from-jekyll%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" aria-label="Share on Twitter">
                 <i class="fa fa-twitter" aria-hidden="true"></i>
             </a>
-            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2f2014%2f04%2f02%2fmigrate-from-jekyll%2f"
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyounglogos.github.io%2f2014%2f04%2f02%2fmigrate-from-jekyll%2f"
                 onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" aria-label="Share on Facebook">
                 <i class="fa fa-facebook" aria-hidden="true"></i>
             </a>
@@ -264,7 +209,7 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
             <div class="container">
                 <div class="site-title-wrapper">
                     <h1 class="site-title">
-                        <a href="http://localhost:1313/">Junqi Yang Blog</a>
+                        <a href="https://younglogos.github.io/">Junqi Yang Blog</a>
                     </h1>
                     <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
                         <i class="fa fa-angle-up" aria-hidden="true"></i>
@@ -272,7 +217,7 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
                 </div>
 
                 <p class="footer-copyright">
-                    <span><a href="http://localhost:1313/">&copy; 2026</a></span>
+                    <span><a href="https://younglogos.github.io/">&copy; 2026</a></span>
                 </p>
                 <p class="footer-copyright">
                     <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
@@ -281,9 +226,9 @@ Liquid::Template.register_tag('image', Jekyll::ImageTag)
             </div>
         </footer>
 
-        <script src="http://localhost:1313/js/jquery-1.11.3.min.js"></script>
-        <script src="http://localhost:1313/js/jquery.fitvids.js"></script>
-        <script src="http://localhost:1313/js/scripts.js"></script>
+        <script src="https://younglogos.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://younglogos.github.io/js/jquery.fitvids.js"></script>
+        <script src="https://younglogos.github.io/js/scripts.js"></script>
         
     </body>
 </html>

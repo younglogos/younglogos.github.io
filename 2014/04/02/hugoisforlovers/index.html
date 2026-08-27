@@ -1,55 +1,102 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Getting Started with Hugo &middot; Junqi Yang</title>
-        <meta name="description" content="Step 1. Install Hugo
-Goto hugo releases and download the
-appropriate version for your os and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at installing hugo
-Step 2. Build the Docs
-Hugo has its own example site which happens to also be the documentation site
-you are reading right now.
-Follow the following steps:
+        <title>Hugo 入门 &middot; Junqi Yang</title>
+        <meta name="description" content="第一步：安装 Hugo
+前往 Hugo 发布页，下载与你的操作系统和架构对应的版本。
+把它保存到一个特定位置，下一步我们会用到。
+更完整的说明见 安装 Hugo。
+第二步：构建文档
+Hugo 自带一个示例站点，恰好也是你现在正在阅读的文档站。
+按以下步骤操作：
 
-Clone the hugo repository
-Go into the repo
-Run hugo in server mode and build the docs
-Open your browser to http://localhost:1313
+克隆 hugo 仓库
+进入仓库目录
+以 server 模式运行 hugo，构建文档
+在浏览器打开 http://localhost:1313
 
-Corresponding pseudo commands:">
+对应的伪命令：
+git clone https://github.com/spf13/hugo
+cd hugo
+/path/to/where/you/installed/hugo server --source=./docs
+&gt; 29 pages created
+&gt; 0 tags index created
+&gt; in 27 ms
+&gt; Web Server is available at http://localhost:1313
+&gt; Press ctrl&#43;c to stop
+
+完成之后，就可以在本地构建上跟随本页的其余部分操作了。
+第三步：修改文档站点
+按 ctrl&#43;c 停止 Hugo 进程。
+现在我们重新运行 hugo，这次加上 watch 模式：
+/path/to/hugo/from/step/1/hugo server --source=./docs --watch
+&gt; 29 pages created
+&gt; 0 tags index created
+&gt; in 27 ms
+&gt; Web Server is available at http://localhost:1313
+&gt; Watching for changes in /Users/spf13/Code/hugo/docs/content
+&gt; Press ctrl&#43;c to stop
+
+打开你喜欢的编辑器，修改其中一个源内容页。比如修改本文件来修正那个笔误。">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
         <meta name="generator" content="Hugo 0.165.0">
         <meta name="robots" content="index,follow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="Getting Started with Hugo">
-<meta property="og:description" content="Step 1. Install Hugo
-Goto hugo releases and download the
-appropriate version for your os and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at installing hugo
-Step 2. Build the Docs
-Hugo has its own example site which happens to also be the documentation site
-you are reading right now.
-Follow the following steps:
+        <meta property="og:title" content="Hugo 入门">
+<meta property="og:description" content="第一步：安装 Hugo
+前往 Hugo 发布页，下载与你的操作系统和架构对应的版本。
+把它保存到一个特定位置，下一步我们会用到。
+更完整的说明见 安装 Hugo。
+第二步：构建文档
+Hugo 自带一个示例站点，恰好也是你现在正在阅读的文档站。
+按以下步骤操作：
 
-Clone the hugo repository
-Go into the repo
-Run hugo in server mode and build the docs
-Open your browser to http://localhost:1313
+克隆 hugo 仓库
+进入仓库目录
+以 server 模式运行 hugo，构建文档
+在浏览器打开 http://localhost:1313
 
-Corresponding pseudo commands:">
+对应的伪命令：
+git clone https://github.com/spf13/hugo
+cd hugo
+/path/to/where/you/installed/hugo server --source=./docs
+&gt; 29 pages created
+&gt; 0 tags index created
+&gt; in 27 ms
+&gt; Web Server is available at http://localhost:1313
+&gt; Press ctrl&#43;c to stop
+
+完成之后，就可以在本地构建上跟随本页的其余部分操作了。
+第三步：修改文档站点
+按 ctrl&#43;c 停止 Hugo 进程。
+现在我们重新运行 hugo，这次加上 watch 模式：
+/path/to/hugo/from/step/1/hugo server --source=./docs --watch
+&gt; 29 pages created
+&gt; 0 tags index created
+&gt; in 27 ms
+&gt; Web Server is available at http://localhost:1313
+&gt; Watching for changes in /Users/spf13/Code/hugo/docs/content
+&gt; Press ctrl&#43;c to stop
+
+打开你喜欢的编辑器，修改其中一个源内容页。比如修改本文件来修正那个笔误。">
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://localhost:1313/2014/04/02/hugoisforlovers/">
-        <link rel="stylesheet" href="http://localhost:1313/dist/site.css">
-        <link rel="stylesheet" href="http://localhost:1313/dist/syntax.css">
+<meta property="og:url" content="https://younglogos.github.io/2014/04/02/hugoisforlovers/">
+        <link rel="stylesheet" href="https://younglogos.github.io/dist/site.css">
+        <link rel="stylesheet" href="https://younglogos.github.io/dist/syntax.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         
-        
+        <style>
+     
+    .site-nav-item .lang-current {
+        font-weight: 700;
+        opacity: 0.85;
+    }
+</style>
+
         
         
         
@@ -64,11 +111,11 @@ Corresponding pseudo commands:">
                     <div class="site-title-wrapper">
                         
                             <h1 class="site-title">
-                                <a href="http://localhost:1313/">Junqi Yang Blog</a>
+                                <a href="https://younglogos.github.io/">Junqi Yang Blog</a>
                             </h1>
                         
                         
-                            <a class="button-square" href="http://localhost:1313/index.xml" aria-label="RSS"><i class="fa fa-rss" aria-hidden="true"></i></a>
+                            <a class="button-square" href="https://younglogos.github.io/index.xml" aria-label="RSS"><i class="fa fa-rss" aria-hidden="true"></i></a>
                         
                         
                             <a class="button-square button-social hint--top" data-hint="Twitter" aria-label="Twitter" href="https://twitter.com/junqi_yang" rel="me" >
@@ -94,12 +141,32 @@ Corresponding pseudo commands:">
                     <ul class="site-nav">
                         
     <li class="site-nav-item">
-        <a href="/">Blog</a>
+        <a href="/">博客</a>
     </li>
 
     <li class="site-nav-item">
-        <a href="/page/about/">About</a>
+        <a href="/page/about/">关于</a>
     </li>
+
+
+    
+        <li class="site-nav-item">
+            <span class="lang-current" title="中文">中文</span>
+        </li>
+    
+
+    
+        
+        
+        
+            
+        
+            
+        
+        <li class="site-nav-item">
+            <a href="https://younglogos.github.io/en/2014/04/02/hugoisforlovers/" title="English">English</a>
+        </li>
+    
 
 
                     </ul>
@@ -112,11 +179,13 @@ Corresponding pseudo commands:">
 <div class="container">
     <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
         <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Getting Started with Hugo</h1>
+    <h1 class="post-title" itemprop="name headline">Hugo 入门</h1>
     
     <p class="post-date">
-        <span>Published <time datetime="2014-04-02" itemprop="datePublished">Wed, Apr 2, 2014</time></span>
-        <span>by</span>
+        
+            <span>发布于 <time datetime="2014-04-02" itemprop="datePublished">2014年04月02日</time></span>
+            <span>作者</span>
+        
         <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
             <span itemprop="name">
                 <a href="#" itemprop="url" rel="author">Junqi Yang</a>
@@ -125,30 +194,31 @@ Corresponding pseudo commands:">
     </p>
     
         <p class="post-reading post-line">
-            <span>Estimated reading time: 2 min</span>
+            
+                <span>预计阅读时间：1 分钟</span>
+            
         </p>
     
 </header>
 
+
         <div class="post-content clearfix" itemprop="articleBody">
     
 
-    <h2 id="step-1-install-hugo">Step 1. Install Hugo</h2>
-<p>Goto <a href="https://github.com/spf13/hugo/releases">hugo releases</a> and download the
-appropriate version for your os and architecture.</p>
-<p>Save it somewhere specific as we will be using it in the next step.</p>
-<p>More complete instructions are available at <a href="/overview/installing/">installing hugo</a></p>
-<h2 id="step-2-build-the-docs">Step 2. Build the Docs</h2>
-<p>Hugo has its own example site which happens to also be the documentation site
-you are reading right now.</p>
-<p>Follow the following steps:</p>
+    <h2 id="第一步安装-hugo">第一步：安装 Hugo</h2>
+<p>前往 <a href="https://github.com/spf13/hugo/releases">Hugo 发布页</a>，下载与你的操作系统和架构对应的版本。</p>
+<p>把它保存到一个特定位置，下一步我们会用到。</p>
+<p>更完整的说明见 <a href="/overview/installing/">安装 Hugo</a>。</p>
+<h2 id="第二步构建文档">第二步：构建文档</h2>
+<p>Hugo 自带一个示例站点，恰好也是你现在正在阅读的文档站。</p>
+<p>按以下步骤操作：</p>
 <ol>
-<li>Clone the <a href="https://github.com/spf13/hugo">hugo repository</a></li>
-<li>Go into the repo</li>
-<li>Run hugo in server mode and build the docs</li>
-<li>Open your browser to http://localhost:1313</li>
+<li>克隆 <a href="https://github.com/spf13/hugo">hugo 仓库</a></li>
+<li>进入仓库目录</li>
+<li>以 server 模式运行 hugo，构建文档</li>
+<li>在浏览器打开 http://localhost:1313</li>
 </ol>
-<p>Corresponding pseudo commands:</p>
+<p>对应的伪命令：</p>
 <pre><code>git clone https://github.com/spf13/hugo
 cd hugo
 /path/to/where/you/installed/hugo server --source=./docs
@@ -158,10 +228,10 @@ cd hugo
 &gt; Web Server is available at http://localhost:1313
 &gt; Press ctrl+c to stop
 </code></pre>
-<p>Once you&rsquo;ve gotten here, follow along the rest of this page on your local build.</p>
-<h2 id="step-3-change-the-docs-site">Step 3. Change the docs site</h2>
-<p>Stop the Hugo process by hitting ctrl+c.</p>
-<p>Now we are going to run hugo again, but this time with hugo in watch mode.</p>
+<p>完成之后，就可以在本地构建上跟随本页的其余部分操作了。</p>
+<h2 id="第三步修改文档站点">第三步：修改文档站点</h2>
+<p>按 ctrl+c 停止 Hugo 进程。</p>
+<p>现在我们重新运行 hugo，这次加上 watch 模式：</p>
 <pre><code>/path/to/hugo/from/step/1/hugo server --source=./docs --watch
 &gt; 29 pages created
 &gt; 0 tags index created
@@ -170,40 +240,35 @@ cd hugo
 &gt; Watching for changes in /Users/spf13/Code/hugo/docs/content
 &gt; Press ctrl+c to stop
 </code></pre>
-<p>Open your <a href="http://vim.spf13.com">favorite editor</a> and change one of the source
-content pages. How about changing this very file to <em>fix the typo</em>. How about changing this very file to <em>fix the typo</em>.</p>
-<p>Content files are found in <code>docs/content/</code>. Unless otherwise specified, files
-are located at the same relative location as the url, in our case
-<code>docs/content/overview/quickstart.md</code>.</p>
-<p>Change and save this file.. Notice what happened in your terminal.</p>
+<p>打开你<a href="http://vim.spf13.com">喜欢的编辑器</a>，修改其中一个源内容页。比如修改本文件来<em>修正那个笔误</em>。</p>
+<p>内容文件位于 <code>docs/content/</code>。除非另有说明，文件与其 URL 的相对位置一一对应，本例中是 <code>docs/content/overview/quickstart.md</code>。</p>
+<p>修改并保存这个文件，注意终端里发生了什么：</p>
 <pre><code>&gt; Change detected, rebuilding site
 
 &gt; 29 pages created
 &gt; 0 tags index created
 &gt; in 26 ms
 </code></pre>
-<p>Refresh the browser and observe that the typo is now fixed.</p>
-<p>Notice how quick that was. Try to refresh the site before it&rsquo;s finished building.. I double dare you.
-Having nearly instant feedback enables you to have your creativity flow without waiting for long builds.</p>
-<h2 id="step-4-have-fun">Step 4. Have fun</h2>
-<p>The best way to learn something is to play with it.</p>
+<p>刷新浏览器，笔误已被修正。</p>
+<p>注意这一切有多快。试着在构建完成前刷新页面吧，我谅你也不敢。近乎即时的反馈让你的创造力无需等待漫长的构建。</p>
+<h2 id="第四步尽情玩耍">第四步：尽情玩耍</h2>
+<p>学习一样东西最好的方式，就是把玩它。</p>
 
 </div>
 
         <footer class="post-footer clearfix">
         <p class="post-tags">
             <span>Tagged:</span>
-                <a href="/tags/go/">go</a>, 
-                <a href="/tags/golang/">golang</a>, 
                 <a href="/tags/hugo/">hugo</a>, 
-                <a href="/tags/development/">development</a>
+                <a href="/tags/%E5%85%A5%E9%97%A8/">入门</a>, 
+                <a href="/tags/%E5%BC%80%E5%8F%91/">开发</a>
         </p>
     <div class="share">
-            <a class="icon-twitter" href="https://twitter.com/share?text=Getting%20Started%20with%20Hugo&url=http%3a%2f%2flocalhost%3a1313%2f2014%2f04%2f02%2fhugoisforlovers%2f"
+            <a class="icon-twitter" href="https://twitter.com/share?text=Hugo%20%e5%85%a5%e9%97%a8&url=https%3a%2f%2fyounglogos.github.io%2f2014%2f04%2f02%2fhugoisforlovers%2f"
                 onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" aria-label="Share on Twitter">
                 <i class="fa fa-twitter" aria-hidden="true"></i>
             </a>
-            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2flocalhost%3a1313%2f2014%2f04%2f02%2fhugoisforlovers%2f"
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyounglogos.github.io%2f2014%2f04%2f02%2fhugoisforlovers%2f"
                 onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" aria-label="Share on Facebook">
                 <i class="fa fa-facebook" aria-hidden="true"></i>
             </a>
@@ -221,7 +286,7 @@ Having nearly instant feedback enables you to have your creativity flow without 
             <div class="container">
                 <div class="site-title-wrapper">
                     <h1 class="site-title">
-                        <a href="http://localhost:1313/">Junqi Yang Blog</a>
+                        <a href="https://younglogos.github.io/">Junqi Yang Blog</a>
                     </h1>
                     <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
                         <i class="fa fa-angle-up" aria-hidden="true"></i>
@@ -229,7 +294,7 @@ Having nearly instant feedback enables you to have your creativity flow without 
                 </div>
 
                 <p class="footer-copyright">
-                    <span><a href="http://localhost:1313/">&copy; 2026</a></span>
+                    <span><a href="https://younglogos.github.io/">&copy; 2026</a></span>
                 </p>
                 <p class="footer-copyright">
                     <span><a href="https://github.com/roryg/ghostwriter">Ghostwriter theme</a> By <a href="http://jollygoodthemes.com">JollyGoodThemes</a></span>
@@ -238,9 +303,9 @@ Having nearly instant feedback enables you to have your creativity flow without 
             </div>
         </footer>
 
-        <script src="http://localhost:1313/js/jquery-1.11.3.min.js"></script>
-        <script src="http://localhost:1313/js/jquery.fitvids.js"></script>
-        <script src="http://localhost:1313/js/scripts.js"></script>
+        <script src="https://younglogos.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://younglogos.github.io/js/jquery.fitvids.js"></script>
+        <script src="https://younglogos.github.io/js/scripts.js"></script>
         
     </body>
 </html>

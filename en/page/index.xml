@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Pages on Junqi Yang Blog</title>
+		<link>https://younglogos.github.io/en/page/</link>
+		<description>Recent content in Pages on Junqi Yang Blog</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<atom:link href="https://younglogos.github.io/en/page/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>About</title>
+				<link>https://younglogos.github.io/en/page/about/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://younglogos.github.io/en/page/about/</guid>
+				<description>&lt;h2 id=&#34;about&#34;&gt;About&lt;/h2&gt;&#xA;&lt;p&gt;I am a PhD student at the School of Life Sciences, Peking University. I started this blog to build an outlet for what I see, hear, and think. Outside the lab I enjoy playing the part of an amateur coder — practicing often, producing masterpieces rarely. Keeping this blog is also a way to learn better and keep myself accountable. Given my field, I will also write summaries of research progress in the life sciences. In this day and age, thinking seems to have become a burden: we receive so much information every day that simply consuming it drains our attention and time. I refuse to be someone who merely drifts along in the flood of information. I would rather read intellectually nourishing books, engage in effortful thinking, and squeeze the results into words. In short, much of this is still under construction — if anything here seems out of date, please don&amp;rsquo;t take every word too seriously&amp;hellip;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Contact</title>
+				<link>https://younglogos.github.io/en/page/contact/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+				<guid>https://younglogos.github.io/en/page/contact/</guid>
+				<description>&lt;h2 id=&#34;contact&#34;&gt;Contact&lt;/h2&gt;&#xA;&lt;p&gt;Feel free to reach me through:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;GitHub&lt;/strong&gt;: &lt;a href=&#34;https://github.com/younglogos&#34;&gt;github.com/younglogos&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Twitter/X&lt;/strong&gt;: &lt;a href=&#34;https://twitter.com/junqi_yang&#34;&gt;@junqi_yang&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;LinkedIn&lt;/strong&gt;: &lt;a href=&#34;https://www.linkedin.com/in/junqi-yang-144392a8/&#34;&gt;Junqi Yang&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+	</channel>
+</rss>

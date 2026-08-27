@@ -2,25 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Hugo on Junqi Yang Blog</title>
-		<link>http://localhost:1313/tags/hugo/</link>
+		<link>https://younglogos.github.io/tags/hugo/</link>
 		<description>Recent content in Hugo on Junqi Yang Blog</description>
 		<generator>Hugo</generator>
-		<language>en-us</language>
+		<language>zh-CN</language>
 		
 		
-		
-			<copyright>Junqi Yang</copyright>
 		
 		
 			<lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://younglogos.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Getting Started with Hugo</title>
-				<link>http://localhost:1313/2014/04/02/hugoisforlovers/</link>
+				<title>Hugo 入门</title>
+				<link>https://younglogos.github.io/2014/04/02/hugoisforlovers/</link>
 				<pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-				<guid>http://localhost:1313/2014/04/02/hugoisforlovers/</guid>
-				<description>&lt;h2 id=&#34;step-1-install-hugo&#34;&gt;Step 1. Install Hugo&lt;/h2&gt;&#xA;&lt;p&gt;Goto &lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;hugo releases&lt;/a&gt; and download the&#xA;appropriate version for your os and architecture.&lt;/p&gt;&#xA;&lt;p&gt;Save it somewhere specific as we will be using it in the next step.&lt;/p&gt;&#xA;&lt;p&gt;More complete instructions are available at &lt;a href=&#34;http://localhost:1313/overview/installing/&#34;&gt;installing hugo&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;step-2-build-the-docs&#34;&gt;Step 2. Build the Docs&lt;/h2&gt;&#xA;&lt;p&gt;Hugo has its own example site which happens to also be the documentation site&#xA;you are reading right now.&lt;/p&gt;&#xA;&lt;p&gt;Follow the following steps:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Clone the &lt;a href=&#34;https://github.com/spf13/hugo&#34;&gt;hugo repository&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Go into the repo&lt;/li&gt;&#xA;&lt;li&gt;Run hugo in server mode and build the docs&lt;/li&gt;&#xA;&lt;li&gt;Open your browser to http://localhost:1313&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Corresponding pseudo commands:&lt;/p&gt;</description>
+				<guid>https://younglogos.github.io/2014/04/02/hugoisforlovers/</guid>
+				<description>&lt;h2 id=&#34;第一步安装-hugo&#34;&gt;第一步：安装 Hugo&lt;/h2&gt;&#xA;&lt;p&gt;前往 &lt;a href=&#34;https://github.com/spf13/hugo/releases&#34;&gt;Hugo 发布页&lt;/a&gt;，下载与你的操作系统和架构对应的版本。&lt;/p&gt;&#xA;&lt;p&gt;把它保存到一个特定位置，下一步我们会用到。&lt;/p&gt;&#xA;&lt;p&gt;更完整的说明见 &lt;a href=&#34;https://younglogos.github.io/overview/installing/&#34;&gt;安装 Hugo&lt;/a&gt;。&lt;/p&gt;&#xA;&lt;h2 id=&#34;第二步构建文档&#34;&gt;第二步：构建文档&lt;/h2&gt;&#xA;&lt;p&gt;Hugo 自带一个示例站点，恰好也是你现在正在阅读的文档站。&lt;/p&gt;&#xA;&lt;p&gt;按以下步骤操作：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;克隆 &lt;a href=&#34;https://github.com/spf13/hugo&#34;&gt;hugo 仓库&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;进入仓库目录&lt;/li&gt;&#xA;&lt;li&gt;以 server 模式运行 hugo，构建文档&lt;/li&gt;&#xA;&lt;li&gt;在浏览器打开 http://localhost:1313&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;对应的伪命令：&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;git clone https://github.com/spf13/hugo&#xA;cd hugo&#xA;/path/to/where/you/installed/hugo server --source=./docs&#xA;&amp;gt; 29 pages created&#xA;&amp;gt; 0 tags index created&#xA;&amp;gt; in 27 ms&#xA;&amp;gt; Web Server is available at http://localhost:1313&#xA;&amp;gt; Press ctrl+c to stop&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;完成之后，就可以在本地构建上跟随本页的其余部分操作了。&lt;/p&gt;&#xA;&lt;h2 id=&#34;第三步修改文档站点&#34;&gt;第三步：修改文档站点&lt;/h2&gt;&#xA;&lt;p&gt;按 ctrl+c 停止 Hugo 进程。&lt;/p&gt;&#xA;&lt;p&gt;现在我们重新运行 hugo，这次加上 watch 模式：&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;/path/to/hugo/from/step/1/hugo server --source=./docs --watch&#xA;&amp;gt; 29 pages created&#xA;&amp;gt; 0 tags index created&#xA;&amp;gt; in 27 ms&#xA;&amp;gt; Web Server is available at http://localhost:1313&#xA;&amp;gt; Watching for changes in /Users/spf13/Code/hugo/docs/content&#xA;&amp;gt; Press ctrl+c to stop&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;打开你&lt;a href=&#34;http://vim.spf13.com&#34;&gt;喜欢的编辑器&lt;/a&gt;，修改其中一个源内容页。比如修改本文件来&lt;em&gt;修正那个笔误&lt;/em&gt;。&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>
