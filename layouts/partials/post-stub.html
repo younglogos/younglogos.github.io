@@ -1,0 +1,9 @@
+<li class="post-stub" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+    <a href="{{ .Permalink }}" itemprop="url">
+        <h4 class="post-stub-title" itemprop="name">{{ .Title }}</h4>
+        <time class="post-stub-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ if eq .Site.Language.Lang "zh" }}发布于{{ else }}Published {{ end }}{{ dateFormat (default "Mon, Jan 2, 2006" .Site.Params.dateFormat) .Date }}</time>
+        {{ with .Params.featured }}
+            {{ if eq $.Site.Language.Lang "zh" }}<span class="post-stub-tag">精选</span>{{ else }}<span class="post-stub-tag">Featured</span>{{ end }}
+        {{ end }}
+    </a>
+</li>

@@ -1,0 +1,28 @@
+{{ partial "header.html" . }}
+
+<div id="post-index" class="container">
+    {{ partial "intro.html" . }}
+
+    <article class="post-container">
+        <header class="post-header post-header-line">
+            {{ if eq .Language.Lang "zh" }}
+                <p class="blog-description">网络浩瀚无垠</p>
+            {{ else }}
+                <p class="blog-description">The net is vast and infinite</p>
+            {{ end }}
+        </header>
+    </article>
+
+    <ol class="post-list">
+        {{ $pag := .Paginate .Pages }}
+        {{ range $pag.Pages }}
+            {{ partial "post-stub.html" . }}
+        {{ end }}
+    </ol>
+
+    <div class="post-navigation">
+        {{ partial "pagination.html" . }}
+    </div>
+</div>
+
+{{ partial "footer.html" . }}

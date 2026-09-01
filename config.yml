@@ -1,0 +1,78 @@
+baseurl: "https://younglogos.github.io/"
+title: Junqi Yang Blog
+theme: ghostwriter
+defaultContentLanguage: zh
+
+taxonomies:
+  tag: tags
+
+markup:
+  highlight:
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    tabWidth: 2
+
+author:
+  name: Junqi Yang
+  profile: ""
+
+params:
+  mainSections:
+    - post
+  intro: false
+  headline: ""
+  github: "https://github.com/younglogos"
+  linkedin: "https://www.linkedin.com/in/junqi-yang-144392a8/"
+  twitter: "https://twitter.com/junqi_yang"
+  opengraph: true
+  shareTwitter: true
+  rss: true
+  shareFacebook: true
+  shareLinkedIn: false
+  readingTime: true
+
+permalinks:
+  post: "/:year/:month/:day/:contentbasename/"
+
+languages:
+  zh:
+    weight: 1
+    languageName: "中文"
+    languageCode: zh-CN
+    params:
+      author:
+        name: Junqi Yang
+      description: "网络浩瀚无垠。"
+      readingTimeText: "预计阅读时间"
+      dateFormat: "2006年01月02日"
+    menu:
+      main:
+        - name: "博客"
+          url: /post/
+          weight: 1
+        - name: "关于"
+          url: /page/about/
+          weight: 2
+  en:
+    weight: 2
+    languageName: "English"
+    languageCode: en-us
+    params:
+      author:
+        name: Junqi Yang
+      description: "The net is vast and infinite."
+      readingTimeText: "Estimated reading time:"
+      dateFormat: "Mon, Jan 2, 2006"
+    menu:
+      main:
+        - name: "Blog"
+          url: /en/post/
+          weight: 1
+        - name: "About"
+          url: /en/page/about/
+          weight: 2

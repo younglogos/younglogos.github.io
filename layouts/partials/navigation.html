@@ -1,0 +1,21 @@
+{{ range .Sites }}
+    {{ range .Menus.main.ByWeight }}
+        <li class="site-nav-item">
+            <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+    {{ end }}
+{{ end }}
+{{ if not $.IsHome }}
+    {{ range .Sites }}
+        {{ if ne .Language.Lang $.Site.Language.Lang }}
+        {{ $lang := .Language.Lang }}
+        {{ $target := .Home.Permalink }}
+        {{ range $.AllTranslations }}
+            {{ if eq .Language.Lang $lang }}{{ $target = .Permalink }}{{ end }}
+        {{ end }}
+        <li class="site-nav-item">
+            <a href="{{ $target }}" title="{{ .Language.LanguageName }}">{{ .Language.LanguageName }}</a>
+        </li>
+        {{ end }}
+    {{ end }}
+{{ end }}
