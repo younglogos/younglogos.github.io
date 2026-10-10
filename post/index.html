@@ -92,6 +92,48 @@
     }
     .site-header .button-square { background: #3f51b5; }
     .site-header .button-square:hover { background: #283593; }
+
+     
+     
+    .site-header .site-title-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .site-header .site-logo,
+    .site-header .button-square {
+        float: none;
+    }
+    .site-header .site-logo img {
+        display: block;
+        width: auto;
+        height: 52px;
+        margin: 0;
+        border-radius: 3px;
+    }
+    .site-header .site-logo:hover img {
+        opacity: 0.85;
+    }
+    .site-header .button-square {
+        margin: 0 0 0 10px;
+    }
+    @media only screen and (max-width: 600px) {
+         
+        .site-header .site-title-wrapper {
+            flex-wrap: wrap;
+        }
+        .site-header .site-logo {
+            flex: 0 0 100%;
+            margin-bottom: 15px;
+        }
+        .site-header .site-logo img {
+            height: 44px;
+            margin: 0 auto;
+        }
+        .site-header .button-square {
+            margin: 0 5px;
+        }
+    }
 </style>
 
         
@@ -107,9 +149,9 @@
                 <div class="container">
                     <div class="site-title-wrapper">
                         
-                            <h1 class="site-title">
-                                <a href="https://younglogos.github.io/">Junqi Yang Blog</a>
-                            </h1>
+                            <a class="site-logo" href="https://younglogos.github.io/" aria-label="Junqi Yang Blog" title="Junqi Yang Blog">
+                                <img src="/images/logo.jpg" alt="Junqi Yang Blog" />
+                            </a>
                         
                         
                             <a class="button-square" href="https://younglogos.github.io/index.xml" aria-label="RSS"><i class="fa fa-rss" aria-hidden="true"></i></a>
@@ -208,6 +250,7 @@
 
     <article class="post-container">
         <header class="post-header post-header-line">
+            <h1 class="post-title">博客</h1>
             
                 <p class="post-description">网络浩瀚无垠</p>
             
