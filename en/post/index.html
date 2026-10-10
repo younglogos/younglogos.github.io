@@ -27,6 +27,16 @@
         font-weight: 700;
         opacity: 0.85;
     }
+
+     
+    .site-nav-item a.is-active {
+        border-bottom: 2px solid #f03838;
+        padding-bottom: 3px;
+    }
+    .site-nav-item a.is-active:hover {
+        color: #424242;
+        border-bottom-color: #424242;
+    }
 </style>
 
         
@@ -72,21 +82,40 @@
 
                     <ul class="site-nav">
                         
+
+
+
+
+
     
+    
+        
+        
+        
         <li class="site-nav-item">
             <a href="/post/">博客</a>
         </li>
     
+        
+        
+        
         <li class="site-nav-item">
             <a href="/page/about/">关于</a>
         </li>
     
 
     
+    
+        
+        
+        
         <li class="site-nav-item">
-            <a href="/en/post/">Blog</a>
+            <a href="/en/post/" class="is-active" aria-current="page">Blog</a>
         </li>
     
+        
+        
+        
         <li class="site-nav-item">
             <a href="/en/page/about/">About</a>
         </li>
