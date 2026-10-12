@@ -132,6 +132,37 @@
             margin: 0 5px;
         }
     }
+
+     
+    .footer .site-title-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .footer .site-title-wrapper > h1.site-title {
+        float: none;
+    }
+    .footer .footer-actions {
+        display: inline-flex;
+        margin-left: 10px;
+    }
+    .footer .footer-actions .button-square {
+        margin-left: 10px;
+    }
+    .footer .footer-actions .button-square:first-child {
+        margin-left: 10px;
+    }
+    @media only screen and (max-width: 600px) {
+        .footer .site-title-wrapper > h1.site-title {
+            flex: 0 0 100%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .footer .footer-actions {
+            margin-left: 0;
+        }
+    }
 </style>
 
         
@@ -254,7 +285,7 @@
         <div class="post-content clearfix">
     
 
-    <p>目前尚在北漂的生物医药打工人，本科在武汉一所农业院校上学，博士学位在北京海淀成府路上一所高校取得。平日爱好电影、听播客和阅读。我会在这里分享平日的感受、读书笔记、投资实证，以及对医药行业的思考。欢迎通过邮件与我产生联系：<code>yjq1994@outlook.com</code>。</p>
+    <p>目前尚在北漂的生物医药打工人，本科在武汉一所农业院校上学，博士学位在北京海淀成府路上一所高校取得。平日爱好电影、听播客和阅读。我会在这里分享平日的感受、读书笔记、投资实证，以及对医药行业的思考。</p>
 <p>网页主题来自<a href="https://github.com/roryg/ghostwriter">hugo</a>。</p>
 
 </div>
@@ -270,9 +301,14 @@
                     <h1 class="site-title">
                         <a href="https://younglogos.github.io/">© Young Joe 2026</a>
                     </h1>
-                    <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
-                        <i class="fa fa-angle-up" aria-hidden="true"></i>
-                    </a>
+                    <div class="footer-actions">
+                        <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
+                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                        </a>
+                        <a class="button-square button-email" href="mailto:yjq1994@outlook.com" aria-label="Email">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </footer>

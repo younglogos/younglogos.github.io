@@ -134,6 +134,37 @@
             margin: 0 5px;
         }
     }
+
+     
+    .footer .site-title-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .footer .site-title-wrapper > h1.site-title {
+        float: none;
+    }
+    .footer .footer-actions {
+        display: inline-flex;
+        margin-left: 10px;
+    }
+    .footer .footer-actions .button-square {
+        margin-left: 10px;
+    }
+    .footer .footer-actions .button-square:first-child {
+        margin-left: 10px;
+    }
+    @media only screen and (max-width: 600px) {
+        .footer .site-title-wrapper > h1.site-title {
+            flex: 0 0 100%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .footer .footer-actions {
+            margin-left: 0;
+        }
+    }
 </style>
 
         
@@ -279,9 +310,14 @@
                     <h1 class="site-title">
                         <a href="https://younglogos.github.io/">© Young Joe 2026</a>
                     </h1>
-                    <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
-                        <i class="fa fa-angle-up" aria-hidden="true"></i>
-                    </a>
+                    <div class="footer-actions">
+                        <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
+                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                        </a>
+                        <a class="button-square button-email" href="mailto:yjq1994@outlook.com" aria-label="Email">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </footer>
