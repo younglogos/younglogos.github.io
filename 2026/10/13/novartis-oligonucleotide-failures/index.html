@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>诺华两例小核酸药物失败的启示 &middot; Junqi Yang</title>
+        <meta name="description" content="从诺华两例小核酸药物 III 期失败，反思机制有效 ≠ 临床有效的边界。">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="generator" content="Hugo 0.165.0">
+        <meta name="robots" content="index,follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="诺华两例小核酸药物失败的启示">
+<meta property="og:description" content="从诺华两例小核酸药物 III 期失败，反思机制有效 ≠ 临床有效的边界。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://younglogos.github.io/2026/10/13/novartis-oligonucleotide-failures/">
+        <link rel="stylesheet" href="https://younglogos.github.io/dist/site.css">
+        <link rel="stylesheet" href="https://younglogos.github.io/dist/syntax.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin,cyrillic-ext,latin-ext,cyrillic">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        
+        <style>
+     
+
+     
+    a { color: #3f51b5; }
+
+     
+    blockquote { border-left-color: #3f51b5; }
+
+     
+    .button-square,
+    .button:hover,
+    .site-title a { background: #3f51b5; }
+    .button-square:hover,
+    .site-title a:hover,
+    .footer .site-title a:hover { background: #283593; }
+
+     
+    .blog-description a:hover,
+    .post-date a:hover,
+    .post-reading a:hover { color: #3f51b5; }
+
+     
+    .post-content a:hover { border-bottom-color: #3f51b5; }
+
+     
+    .share a { background: #3f51b5; }
+    .share a:hover { background: #283593; }
+
+     
+    .newer-posts,
+    .older-posts { background: #3f51b5; }
+    .newer-posts:hover,
+    .older-posts:hover { background: #283593; }
+
+     
+    .post-stub a:hover { background: #e8eaf6; color: #3f51b5; }
+     
+    .post-stub a:hover .post-stub-tag { background: #3f51b5; }
+
+     
+    .author-meta a:hover { color: #3f51b5; }
+
+     
+    #nprogress .bar { background: #3f51b5; }
+    #nprogress .peg { box-shadow: 0 0 10px #3f51b5, 0 0 5px #3f51b5; }
+    #nprogress .spinner-icon { border-left-color: #3f51b5; border-top-color: #3f51b5; }
+
+     
+
+     
+    .site-nav-item .lang-current {
+        font-weight: 700;
+        opacity: 0.85;
+    }
+
+     
+    .site-header .site-title a { background: #3f51b5; }
+    .site-header .site-title a:hover { background: #283593; }
+    .site-header .site-nav-item a { color: #3f51b5; }
+    .site-header .site-nav-item a:hover { color: #1a237e; }
+    .site-header .site-nav-item a.is-active {
+        border-bottom: 2px solid #3f51b5;
+        padding-bottom: 3px;
+    }
+    .site-header .site-nav-item a.is-active:hover {
+        color: #1a237e;
+        border-bottom-color: #1a237e;
+    }
+    .site-header .button-square { background: #3f51b5; }
+    .site-header .button-square:hover { background: #283593; }
+
+     
+     
+    .site-header .site-title-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .site-header .site-logo,
+    .site-header .button-square {
+        float: none;
+    }
+    .site-header .site-logo img {
+        display: block;
+        width: auto;
+        height: 52px;
+        margin: 0;
+        border-radius: 3px;
+    }
+    .site-header .site-logo:hover img {
+        opacity: 0.85;
+    }
+    .site-header .button-square {
+        margin: 0 0 0 10px;
+    }
+    @media only screen and (max-width: 600px) {
+         
+        .site-header .site-title-wrapper {
+            flex-wrap: wrap;
+        }
+        .site-header .site-logo {
+            flex: 0 0 100%;
+            margin-bottom: 15px;
+        }
+        .site-header .site-logo img {
+            height: 44px;
+            margin: 0 auto;
+        }
+        .site-header .button-square {
+            margin: 0 5px;
+        }
+    }
+
+     
+    .footer .site-title-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .footer .site-title-wrapper > h1.site-title {
+        float: none;
+    }
+    .footer .footer-actions {
+        display: inline-flex;
+        margin-left: 10px;
+    }
+    .footer .footer-actions .button-square {
+        margin-left: 10px;
+    }
+    .footer .footer-actions .button-square:first-child {
+        margin-left: 10px;
+    }
+    @media only screen and (max-width: 600px) {
+        .footer .site-title-wrapper > h1.site-title {
+            flex: 0 0 100%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .footer .footer-actions {
+            margin-left: 0;
+        }
+    }
+</style>
+
+        
+        
+        
+
+    </head>
+    <body>
+        
+
+        <div id="wrapper">
+            <header class="site-header">
+                <div class="container">
+                    <div class="site-title-wrapper">
+                        
+                            <a class="site-logo" href="https://younglogos.github.io/" aria-label="Junqi Yang Blog" title="Junqi Yang Blog">
+                                <img src="/images/logo.jpg" alt="Junqi Yang Blog" />
+                            </a>
+                        
+                        
+                            <a class="button-square" href="https://younglogos.github.io/index.xml" aria-label="RSS"><i class="fa fa-rss" aria-hidden="true"></i></a>
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Twitter" aria-label="Twitter" href="https://twitter.com/junqi_yang" rel="me" >
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="Github" aria-label="Github" href="https://github.com/younglogos" rel="me">
+                                <i class="fa fa-github-alt" aria-hidden="true"></i>
+                            </a>
+                        
+                        
+                        
+                            <a class="button-square button-social hint--top" data-hint="LinkedIn" aria-label="LinkedIn" href="https://www.linkedin.com/in/junqi-yang-144392a8/" rel="me">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        
+                        
+                    </div>
+
+                    <ul class="site-nav">
+                        
+
+
+
+
+
+    
+    
+        
+        
+        
+        <li class="site-nav-item">
+            <a href="/post/" class="is-active" aria-current="page">博客</a>
+        </li>
+    
+        
+        
+        
+        <li class="site-nav-item">
+            <a href="/page/about/">关于</a>
+        </li>
+    
+
+    
+    
+        
+        
+        
+        <li class="site-nav-item">
+            <a href="/en/post/">Blog</a>
+        </li>
+    
+        
+        
+        
+        <li class="site-nav-item">
+            <a href="/en/page/about/">About</a>
+        </li>
+    
+
+
+    
+        
+    
+        
+        
+        
+        
+            
+        
+            
+        
+        <li class="site-nav-item">
+            <a href="https://younglogos.github.io/en/2026/10/13/novartis-oligonucleotide-failures/" title="English">English</a>
+        </li>
+        
+    
+
+
+                    </ul>
+                </div>
+            </header>
+
+            <div id="container">
+
+
+<div class="container">
+    <article class="post-container" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">诺华两例小核酸药物失败的启示</h1>
+    
+        <p class="post-description" itemprop="description">从诺华两例小核酸药物 III 期失败，反思机制有效 ≠ 临床有效的边界。</p>
+    
+    <p class="post-date">
+        
+            <span>发布于 <time datetime="2026-10-13" itemprop="datePublished">2026年10月13日</time></span>
+            <span>作者</span>
+        
+        <span itemscope="" itemprop="author" itemtype="https://schema.org/Person">
+            <span itemprop="name">
+                <a href="#" itemprop="url" rel="author">Junqi Yang</a>
+            </span>
+        </span>
+    </p>
+    
+        <p class="post-reading post-line">
+            
+                <span>预计阅读时间：1 分钟</span>
+            
+        </p>
+    
+</header>
+
+
+        <div class="post-content clearfix" itemprop="articleBody">
+    
+
+    <p>最近诺华 III 期失败的两例小核酸药物，打破了我对小核酸药物的固有观念，即靶点表达被抑制，便大概率会有药效。这样的认识本质上是一种静态的世界观，认为只要修正了某个开关就能逆转结局。然而结局的塑造都是动态中形成，或许一开始有某个 trigger 或者主导因素，但发展过程中却有着多个方面以及多个结果一同角力在其中的。</p>
+<p>诺华报道出的两个失败管线：Pelacarsen、del-desiran，分别是针对心血管疾病、1 型强直性肌营养不良。Pelacarsen 的分子剂型是反义核苷酸（ASO），靶点是 LPA 基因，从源头抑制 Lp(a) 的合成。del-desiran 是抗体-寡核苷酸偶联物（AOC），靶点是 DMPK 基因。</p>
+<p>这两个管线的靶点基础都挺坚实的，LPA 是人类遗传学手段筛选到的靶点，经过孟德尔随机化验证了 LPA 与心血管疾病的因果关系，理论上 LPA 的表达量降低能有益于心血管的改善。Pelacarsen 在 II 期已经证明能够敲低 Lp(a) 的 72–80% 表达，在生物标志物层面证明了药效。但在大 III 期里，4 个临床终点（1，心血管死亡；2，非致死性心肌梗死；3，非致死性卒中；4，需住院的紧急冠脉血运重建）均未达标。DMPK 的突变是在 DM1 患者内被发现的，遗传学和生化实验鉴定了 DMPK1 的 CUG 重复导致 RNA 剪接体蛋白（MBNL1）无法正常释放。del-desiran 的主要临床终点：视频手部张开时间，也未达标。</p>
+<p>从实验本身来说，LPA 和 DMPK1 都是和疾病高度关联的靶点，但对于疾病干预来说，却不一定会有效。1，基因突变的效应从出生就开始了，成年后再进行干预不一定能够改善长期积累的效应。心血管这样的慢性疾病发展过程中，多个健康指标都会发生变化，可能最初 Lp(a) 的影响很大，但长期发展后，其他层面因素的病变成为了主要因素，甚至有些病变（例如：动脉粥样硬化、斑块、炎症重塑）已是不可逆的。DM1 也有类似的问题，疾病链条理想情况下是：剪接纠正 → 蛋白异构体归一 → 肌纤维修复/重塑 → 功能改善，但源头疾病的改善不一定会导致最后的功能改善，因为患者多年积累的纤维化、脂肪替代已是不可逆的。2，临床试验人群和靶点效应不是完全匹配，例如 Pelacarsen 入组的是已有 CVD 的高危人群，而人类遗传学的证据里，低 Lp(a) 的人群在年轻时是不发病的。</p>
+<p>有其他分析师或者研究员认为 Pelacarsen 换成 siRNA，以获得更高的基因沉默效率，有助提高临床药效。虽然技术上可以沉默得更彻底，但是 Pelacarsen 的沉默效率已达到了 70–80%，我很怀疑沉默效率再提高 10–15%，临床的边际效益会有多高的提高。DMPK 的 CUG 重复 RNA 主要分布在细胞核内，因此也有说法说 del-desiran 换成入核效率更高的 ASO，结局可能不一样。对于 DM1 这样的疾病，临床终点卡在不可逆纤维化/脂肪替代的话，再高的 CUG 清除效率可能挽救不了临床终点。</p>
+<p>生物标记物和疾病的强关联性，甚至因果性，是机制有效的基础。生物技术对生物标记物的有效干预，代表着药用分子对于疾病控制的基本能力。但这个逻辑链条在疾病过程的复杂性面前不一定总是有效的，疾病发展过程的不同阶段，对哪些靶标进行干预才能获得理想的临床疗效，要求需要对疾病的动态发展有足够的认识，同时这种认识必须是系统层面且是在真实人体内的。在立项中，也能带来一些启示，即什么样的靶点在真实的人体环境里才是对疾病的发展有着最强的影响。</p>
+
+</div>
+
+        <footer class="post-footer clearfix"><div class="share">
+            <a class="icon-twitter" href="https://twitter.com/share?text=%e8%af%ba%e5%8d%8e%e4%b8%a4%e4%be%8b%e5%b0%8f%e6%a0%b8%e9%85%b8%e8%8d%af%e7%89%a9%e5%a4%b1%e8%b4%a5%e7%9a%84%e5%90%af%e7%a4%ba&url=https%3a%2f%2fyounglogos.github.io%2f2026%2f10%2f13%2fnovartis-oligonucleotide-failures%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" aria-label="Share on Twitter">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fyounglogos.github.io%2f2026%2f10%2f13%2fnovartis-oligonucleotide-failures%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" aria-label="Share on Facebook">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+    </div>
+</footer>
+
+        
+    </article>
+</div>
+
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a href="https://younglogos.github.io/">© Young Joe 2026</a>
+                    </h1>
+                    <div class="footer-actions">
+                        <a class="button-square button-email" href="mailto:yjq1994@outlook.com" aria-label="Email">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </a>
+                        <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
+                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://younglogos.github.io/js/jquery-1.11.3.min.js"></script>
+        <script src="https://younglogos.github.io/js/jquery.fitvids.js"></script>
+        <script src="https://younglogos.github.io/js/scripts.js"></script>
+        
+    </body>
+</html>
+
