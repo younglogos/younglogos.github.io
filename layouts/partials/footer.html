@@ -1,0 +1,27 @@
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="site-title-wrapper">
+                    <h1 class="site-title">
+                        <a href="{{ .Site.BaseURL }}">© Young Joe 2026</a>
+                    </h1>
+                    <div class="footer-actions">
+                        <a class="button-square button-email" href="mailto:yjq1994@outlook.com" aria-label="Email">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </a>
+                        <a class="button-square button-jump-top js-jump-top" href="#" aria-label="Back to Top">
+                            <i class="fa fa-angle-up" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="{{ .Site.BaseURL }}js/jquery-1.11.3.min.js"></script>
+        <script src="{{ .Site.BaseURL }}js/jquery.fitvids.js"></script>
+        <script src="{{ .Site.BaseURL }}js/scripts.js"></script>
+        {{ partial "extra-in-foot.html" . }}
+    </body>
+</html>
