@@ -1,0 +1,30 @@
+{{ $curURL := .RelPermalink }}
+{{ $curLang := .Language.Lang }}
+{{ $curSectionURL := "" }}
+{{ with .CurrentSection }}{{ $curSectionURL = .RelPermalink }}{{ end }}
+
+{{ range .Sites }}
+    {{ $menuLang := .Language.Lang }}
+    {{ range .Menus.main.ByWeight }}
+        {{ $menuURL := .URL }}
+        {{ $isSameLang := eq $menuLang $curLang }}
+        {{ $isActive := and $isSameLang (or (hasPrefix $curURL $menuURL) (eq $curSectionURL $menuURL)) }}
+        <li class="site-nav-item">
+            <a href="{{ .URL }}"{{ if $isActive }} class="is-active" aria-current="page"{{ end }}>{{ .Name }}</a>
+        </li>
+    {{ end }}
+{{ end }}
+{{ if not $.IsHome }}
+    {{ range .Sites }}
+        {{ if ne .Language.Lang $.Site.Language.Lang }}
+        {{ $lang := .Language.Lang }}
+        {{ $target := .Home.Permalink }}
+        {{ range $.AllTranslations }}
+            {{ if eq .Language.Lang $lang }}{{ $target = .Permalink }}{{ end }}
+        {{ end }}
+        <li class="site-nav-item">
+            <a href="{{ $target }}" title="{{ .Language.LanguageName }}">{{ .Language.LanguageName }}</a>
+        </li>
+        {{ end }}
+    {{ end }}
+{{ end }}

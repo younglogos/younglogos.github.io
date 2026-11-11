@@ -1,0 +1,162 @@
+<style>
+    /* ============================================================
+       Global indigo accent — overrides the theme's red (#f03838).
+       Applied site-wide so no visible red remains.
+       Palette:
+         primary  #3f51b5
+         deep     #283593  (hover / pressed)
+         pale     #e8eaf6  (hover background for list items)
+       ============================================================ */
+
+    /* 1. Global anchor color (used by every link in the document) */
+    a { color: #3f51b5; }
+
+    /* 2. Blockquote dotted left-border */
+    blockquote { border-left-color: #3f51b5; }
+
+    /* 3. Square buttons: RSS / social icons (header) + jump-to-top (footer)
+       4. Site-title buttons in header AND footer brand link
+          (footer .site-title a:hover is overridden below to keep deep-indigo) */
+    .button-square,
+    .button:hover,
+    .site-title a { background: #3f51b5; }
+    .button-square:hover,
+    .site-title a:hover,
+    .footer .site-title a:hover { background: #283593; }
+
+    /* 5. Blog description / post date / post reading hover */
+    .blog-description a:hover,
+    .post-date a:hover,
+    .post-reading a:hover { color: #3f51b5; }
+
+    /* 6. Inline link hover (dotted underline) inside post content */
+    .post-content a:hover { border-bottom-color: #3f51b5; }
+
+    /* 7. Share buttons on a single-post page */
+    .share a { background: #3f51b5; }
+    .share a:hover { background: #283593; }
+
+    /* 8. Newer / older posts navigation buttons */
+    .newer-posts,
+    .older-posts { background: #3f51b5; }
+    .newer-posts:hover,
+    .older-posts:hover { background: #283593; }
+
+    /* 9. Blog-list hover: light indigo wash + indigo link color */
+    .post-stub a:hover { background: #e8eaf6; color: #3f51b5; }
+    /* 10. The hidden tag that surfaces on hover */
+    .post-stub a:hover .post-stub-tag { background: #3f51b5; }
+
+    /* 11. Author meta link hover */
+    .author-meta a:hover { color: #3f51b5; }
+
+    /* 12-14. NProgress loader (top progress bar + spinner) */
+    #nprogress .bar { background: #3f51b5; }
+    #nprogress .peg { box-shadow: 0 0 10px #3f51b5, 0 0 5px #3f51b5; }
+    #nprogress .spinner-icon { border-left-color: #3f51b5; border-top-color: #3f51b5; }
+
+    /* ============================================================
+       Existing per-area overrides (kept; same palette)
+       ============================================================ */
+
+    /* Language switcher: highlight the current language */
+    .site-nav-item .lang-current {
+        font-weight: 700;
+        opacity: 0.85;
+    }
+
+    /* Header navbar accents — already indigo, kept for completeness */
+    .site-header .site-title a { background: #3f51b5; }
+    .site-header .site-title a:hover { background: #283593; }
+    .site-header .site-nav-item a { color: #3f51b5; }
+    .site-header .site-nav-item a:hover { color: #1a237e; }
+    .site-header .site-nav-item a.is-active {
+        border-bottom: 2px solid #3f51b5;
+        padding-bottom: 3px;
+    }
+    .site-header .site-nav-item a.is-active:hover {
+        color: #1a237e;
+        border-bottom-color: #1a237e;
+    }
+    .site-header .button-square { background: #3f51b5; }
+    .site-header .button-square:hover { background: #283593; }
+
+    /* ============================================================
+       Header brand: image button that links back to the homepage
+       (replaces the old text "Junqi Yang Blog" button)
+       ============================================================ */
+    /* centre the brand image and the icon buttons on one line */
+    .site-header .site-title-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .site-header .site-logo,
+    .site-header .button-square {
+        float: none;
+    }
+    .site-header .site-logo img {
+        display: block;
+        width: auto;
+        height: 52px;
+        margin: 0;
+        border-radius: 3px;
+    }
+    .site-header .site-logo:hover img {
+        opacity: 0.85;
+    }
+    .site-header .button-square {
+        margin: 0 0 0 10px;
+    }
+    @media only screen and (max-width: 600px) {
+        /* brand image on its own line, icon buttons stay in one row below */
+        .site-header .site-title-wrapper {
+            flex-wrap: wrap;
+        }
+        .site-header .site-logo {
+            flex: 0 0 100%;
+            margin-bottom: 15px;
+        }
+        .site-header .site-logo img {
+            height: 44px;
+            margin: 0 auto;
+        }
+        .site-header .button-square {
+            margin: 0 5px;
+        }
+    }
+
+    /* ============================================================
+       Footer: pair the back-to-top button with an email button
+       (kept on the right side of the copyright link)
+       ============================================================ */
+    .footer .site-title-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .footer .site-title-wrapper > h1.site-title {
+        float: none;
+    }
+    .footer .footer-actions {
+        display: inline-flex;
+        margin-left: 10px;
+    }
+    .footer .footer-actions .button-square {
+        margin-left: 10px;
+    }
+    .footer .footer-actions .button-square:first-child {
+        margin-left: 10px;
+    }
+    @media only screen and (max-width: 600px) {
+        .footer .site-title-wrapper > h1.site-title {
+            flex: 0 0 100%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .footer .footer-actions {
+            margin-left: 0;
+        }
+    }
+</style>
